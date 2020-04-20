@@ -1,0 +1,126 @@
+.clearfloat:after {
+     content: "";
+     display: table;
+     height: 0;
+     clear: both;
+     visibility: hidden;
+}
+.clearfloat:before {
+     content: "";
+     display: table;
+     height: 0;
+     clear: both;
+     visibility: hidden;
+}
+.edit {
+	width: 98%;
+	margin: 10px 1%
+}
+.edit .titlebanner {
+	background-color: #eae4ef;
+	padding: 20px 0 15px 20px;
+	font: bold 16px ����;
+	width: 100%;
+	border-bottom: solid 3px #d1c5dc;
+}
+.edit .subgroup {
+	border: 1px #F0F0F0 solid;
+	width: 100%;
+	height: auto;
+	padding: 20px 20px;line-height: 2em;
+	overflow-y:auto
+}
+.edit .subgroup dl {
+	min-height: 30px;
+	float: left;
+	padding:4px;
+	width:100%
+}
+.edit .subgroup dl.half {
+	height: 30px;
+	float: left;
+	padding:4px;
+	width:50%
+}
+.edit .subgroup dl.onethird {
+	height: 30px;
+	float: left;
+	padding:4px;
+	width:33%
+}
+
+.edit .subgroup dl.onethird dt{
+	min-width:0px;
+}
+
+.edit .subgroup dt {
+	height: auto;
+	width: auto;
+	min-width: 120px;
+	text-align: right;
+	float: left;
+	padding: 4px
+}
+.edit .subgroup dd {
+	min-height: 30px;
+	min-width: 120px;
+	float: left;
+	width:160px
+}
+.edit .subgroup dd label{
+	display:inline-block;
+	padding: 4px
+}
+.edit .subgroup dd label input{
+	margin-right:3px;
+}
+.edit .subgroup dd textarea{
+	width:100%;
+	height:50px;
+}
+.edit .subgroup dd select{
+	background: #ffffff;
+	border: 1px solid #b7b7b7;
+	color: #003366;
+	height: 24px;
+}
+.edit .datafield {
+	background: #ffffff;
+	border: 1px solid #b7b7b7;
+	color: #003366;
+	cursor: text;
+	height: 24px;
+	padding: 1px;
+	width:100%
+}
+.edit .temptd {
+	background: #ffffff;
+	border: 1px solid #b7b7b7;
+	color: #003366;
+	cursor: text;
+	height: 24px;
+	padding: 1px;
+	width:100%
+}
+
+.edit input[type="checkbox"],.edit input[type="radio"]{
+	height:auto;
+	width:auto;
+	cursor: pointer;
+}
+.edit .footer {
+	width: 100%;
+	font-size:12px;
+	padding:12px;
+	margin-top:10px;
+	bottom: 0;
+	background-color: #fff;
+	text-align: center;
+	content: "";
+    display: table;
+    height: 0;
+    clear: both;
+}
+.edit .footer div.myButton{
+	left:30%;
+}

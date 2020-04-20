@@ -1,0 +1,24 @@
+@mixin _setbgColor($color){
+  background: $color;
+}
+
+@mixin _setTopBg() {
+  padding: 5px 30px;
+  height: 90px;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  background: -webkit-linear-gradient(90deg, rgba(49,147,245,.5), rgba(49,147,245,1)); /* Safari 5.1 - 6.0 */
+  background: -o-linear-gradient(90deg, rgba(49,147,245,.5), rgba(49,147,245,1)); /* Opera 11.1 - 12.0 */
+  background: -moz-linear-gradient(90deg, rgba(49,147,245,.5), rgba(49,147,245,1)); /* Firefox 3.6 - 15 */
+  background: linear-gradient(90deg, rgba(49,147,245,.5), rgba(49,147,245,1));
+  /*background: rgba(49,147,245,1);*/
+  border-radius: 10px;
+}
+
+@mixin _setCommonBg() {
+  background: -webkit-linear-gradient(-45deg, #3193f5 0%, #30d0f0 100%); /* Safari 5.1 - 6.0 */
+  background: -o-linear-gradient(-45deg, #3193f5 0%, #30d0f0 100%); /* Opera 11.1 - 12.0 */
+  background: -moz-linear-gradient(-45deg, #3193f5 0%, #30d0f0 100%); /* Firefox 3.6 - 15 */
+  background: linear-gradient(-45deg, #3193f5 0%, #30d0f0 100%);
+}

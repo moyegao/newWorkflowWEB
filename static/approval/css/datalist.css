@@ -1,0 +1,220 @@
+.clearfloat:after {
+     content: "";
+     display: table;
+     height: 0;
+     clear: both;
+     visibility: hidden;
+}
+html, body, .container {
+	height: 100%;
+	width: 100%;
+}
+.searchbar {
+	width: 100%;
+	background-color: #fff;
+	padding:10px;
+	line-height:24px;
+	border-bottom: 1px #dfdfdf solid;
+	box-sizing:border-box;
+}
+.left {
+	width: 10%;
+	float: left;
+	height: 100%;
+	overflow: auto;
+	background: rgb(236, 243, 255);
+}
+
+.right {
+	width: 90%;
+	float: right;
+	height: 100%;
+	padding: 0px 10px;
+}
+.searchbar input[type="text"] {
+	cursor: text;
+}
+
+.searchbar input[type="radio"],.searchbar input[type="checkbox"] {
+	margin: 5px 5px 5px 10px;
+}
+.searchbar input,.searchbar select{
+	background: #ffffff;
+	border: 1px solid #b7b7b7;
+	color: #003366;
+}
+.searchbar select {
+	height: 24px;
+}
+
+.searchbar font {
+	margin: 0 5px;
+	display: inline-block;
+	float:left;
+}
+.searchbar select,.searchbar input{
+	margin-left:5px;
+}
+.searchbar input{
+	padding-left:5px;
+	height: 26px;
+	line-height:26px;
+}
+.dataoperate {
+	display:inline-block;
+	float:left;
+}
+.dataoperate .item{
+	width: auto;
+	text-align: center;
+	height: 26px;
+	line-height:26px;
+	border:1px solid #3f98e4;
+	background:#fff;
+	color: #3f98e4;
+	padding: 0 20px;
+	display: inline-block;
+	float:left;
+	margin-left:10px;
+	cursor: pointer;
+	position:relative;
+	z-index:11;
+	-webkit-border-radius: 3px;
+	-moz-border-radius: 3px;
+	-ms-border-radius: 3px;
+	-o-border-radius: 3px;
+	border-radius: 3px;
+	behavior: url(ie-css3.htc);
+	transition: all 0.25s ease-out, color 0.25s ease-out;
+}
+.dataoperate .item:hover{
+	color:#05d2eb;
+}
+.index_box{
+	width:100%;
+	padding-top:10px;
+	overflow:auto;
+}
+.datalist {
+	width: 100%;
+ 	border:1px solid #dfdfdf;
+ 	text-align:left;
+ 	table-layout:fixed;
+}
+.datalist tr {
+	height: 34px
+}
+.datalist thead td {
+	background-color: #dbdbf3;
+	border-bottom: solid 1px #d3cbda;
+	color: #634f73;
+	text-align:center;
+    border: 1px solid #f2f2f2;
+    border-collapse: collapse ;
+}
+
+.datalist tbody tr:nth-child(2n+1) {
+	background-color: #fff
+}
+
+.datalist tbody tr:nth-child(2n) {
+	background-color: #f7f7f7
+}
+
+.datalist tbody tr:hover {
+	background-color: #f7efe7;
+	border: 1px #e7ddd4 solid
+}
+
+.datalist tfoot td {
+	background-color: #ebe9ed;
+	line-height:35px;
+	padding: 8px;
+    border-top: 0px dashed #ddd;
+    margin: 3px 8px;
+}
+
+.datalist tfoot td>div:first-child {
+	float: left;
+	width: auto
+}
+.datalist tfoot td>div{
+	
+    display: inline-block;
+    *display:inline;
+}
+
+.datalist tfoot td>div:last-child {
+	float: right;
+	width: auto;
+}
+.datalist tbody td {
+	word-break: break-all;
+	padding: 0 10px;
+	border-bottom: 1px dashed #ccc;
+	border-right: 1px solid #eee;
+	text-align: left;
+}
+.datalist .previous {
+	cursor: pointer;
+	transform: matrix(-1, 0, 0, 1, 0, 0);
+	-ms-transform: matrix(-1, 0, 0, 1, 0, 0); /* IE 9 */
+	-moz-transform: matrix(-1, 0, 0, 1, 0, 0); /* Firefox */
+	-webkit-transform: rotate(180deg); /* Safari Chrome */
+	-o-transform: matrix(-1, 0, 0, 1, 0, 0) /* Opera */
+}
+
+.datalist .previous:before {
+	content: "\ea1c";
+	font-family: icon;
+	color: gray
+}
+
+.datalist .next {
+	cursor: pointer
+}
+
+.datalist .next:before {
+	content: "\ea1c";
+	font-family: icon;
+	color: gray
+}
+
+.search:before {
+	content: "查询"
+}
+
+.hidden {
+	display: none
+}
+.pagebar {
+	float:left;
+	text-align: center;
+	clear: both
+}
+
+.pagebar span {
+	color:black;
+	font-size: 12px;
+	padding: 5px 8px;
+	border: 1px #dddddd solid;
+	background-color: #f7f7f7;
+	margin: 0px 4px;
+	cursor:pointer
+}
+
+.pagebar span:hover {
+	padding: 5px 8px;
+	border: 1px #f8671d solid;
+	background-color: #f8671d;
+	color: #fff
+}
+
+.pagebar span.sel {
+	font-size: 12px;
+	padding: 5px 8px;
+	border: 1px #dddddd solid;
+	background-color: #977dab;
+	font-weight: bold;
+	color: #fff
+}

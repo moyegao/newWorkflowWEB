@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="renderer" content="webkit">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <link href="static/approval/css/editform.css" rel="stylesheet">
+    <link href="static/approval/css/fontello.css" rel="stylesheet">
+    <link href="static/approval/css/appvoralCSS.css" rel="stylesheet">
+    <link href="static/addone/artdialog/ui-dialog.css" rel="stylesheet">
+    <link href="static/addone/staffselector/selector.css" rel="stylesheet">
+    <link href="static/addone/tree/mytree.css" rel="stylesheet">
+    <link href="static/addone/staffselector/selector.css" rel="stylesheet">
+    <script type="text/javascript" src="static/js/jquery.js"></script>
+    <script type="text/javascript" src="static/js/jquery.form.js"></script>
+    <script type="text/javascript" src="static/addone/artdialog/dialog-min.js"></script>
+    <script type="text/javascript" src="static/addone/artdialog/dialog-plus.js"></script>
+    <script type="text/javascript" src="static/addone/tree/mytree.js"></script>
+    <script type="text/javascript" src="static/addone/staffselector/selector.js"></script>
+    <script type="text/javascript" src="static/js/approvalneedmethod.js"></script>
+    <title>工作流引擎运维平台</title>
+  </head>
+  <style type="text/css">
+  /* 公共样式引入 */
+  @import url("static/css/commonStyle.css");
+
+  
+    html{
+      font-size:16px !important;
+    }
+   	/*水表*/
+   	.water-meter .editBox .el-dialog__body{
+   		padding: 0 30px;
+   		overflow: visible !important;
+     }
+     
+   	/*权限树表格样式*/
+   	.main-content .el-dialog--center .el-dialog__body .el-checkbox{
+   		width: initial;
+   	}
+   	.el-checkbox__input.is-checked+.el-checkbox__label{
+   		margin-right: 10px;
+     }
+     .TwoModel .el-dialog{
+        margin: 0 auto;
+        width: 80%;
+        height: 94%;
+        margin-top: 38px!important;
+        
+     }
+     .TwoModel .el-dialog .el-dialog__body{
+        height: calc(100% - 96px);
+     }
+     .TwoModel .el-dialog .el-dialog__body .ctmInfo .formBill{
+        height: 100%;
+        overflow-y: auto;
+     }
+     
+    .StepCollapse{
+      z-index: 1122;
+      position: absolute;
+      right: 153px;
+      top: 50%;
+      margin-bottom: 25px;
+      cursor: pointer;
+      background-color: #000;
+      color: #f3f3f3;
+      height: 32px;
+      line-height: 32px;
+      font-size: 12px;
+      -webkit-border-top-right-radius: 3px;
+      -webkit-border-bottom-right-radius: 3px;
+      -moz-border-radius-topright: 3px;
+      -moz-border-radius-bottomright: 3px;
+      border-top-right-radius: 3px;
+      border-bottom-right-radius: 3px;
+      filter: alpha(opacity=25);
+      -moz-opacity: 0.25;
+      opacity: 0.25;
+    }
+    .stepsCompar{
+      width: 150px;
+      height: 100%;
+      display: inline-block;
+      border-left: 10px solid #eaf4ff;
+      position: relative;
+    }
+
+    .stepsTitle{
+      font-size: 16px;
+      margin-left: 10px;
+      font-weight: 700;
+      color: #4593d8;
+      display: inline-block;
+      margin-top: 10px;
+    }
+    .el-step__title{
+      font-size: 14px;
+    }
+    .el-steps {
+      width: calc(100% - 30px);
+      height: calc(100% - 80px) !important;
+      margin-left: 30px;
+    }
+    .line{
+      border-bottom: 1px solid #4593d8;
+      height: 0;
+      font-size: 0;
+      overflow: hidden;
+      margin: 5px 10px;
+    }
+    
+    .bread-contain-right {
+      float: right;
+      width: 50%;
+      text-align: right;
+      line-height: 40px;
+    }
+    #crumbs {
+      float: left;
+      width: 30%;
+      padding-right: 0px;
+    }
+    .bread-contain{
+      width: calc(100% - 10px);
+      height: 40px;
+      zoom: 1;
+      border-bottom: 1px solid #eaf4ff;
+    }
+  </style>
+  <body>
+    <div id="app"></div>
+    <!-- built files will be auto injected -->
+    <script>
+      if(window.location.search.indexOf("?ticket=")>-1){
+        localStorage.setItem('token',window.location.search.substring(8));
+      }
+    </script>
+  </body>
+</html>

@@ -1,0 +1,13 @@
+//variable
+@import '/avariable/_attribute';
+@import 'avariable/_color';
+
+//function
+@import 'function/_checkInput';
+@import 'function/_px2rem';
+
+//mixin
+@import 'mixin/bgcolor';
+@import 'mixin/after';
+@import 'mixin/model';
+@import "mixin/bgImgFull";

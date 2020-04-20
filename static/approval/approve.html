@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<link type="text/css" rel="stylesheet" href="../assets/approval/css/editform.css" />
+<link type="text/css" rel="stylesheet" href="../assets/approval/css/fontello.css" />
+<link type="text/css" rel="stylesheet" href="../assets/approval/css/appvoralCSS.css" />
+<link type="text/css" rel="stylesheet" href="../assets/addone/artdialog/ui-dialog.css" />
+<script type="java/script" src="../assets/js/jquery.js"></script>
+</head>
+<body>
+  <div id="workflowDiv">
+      
+  </div>
+</body>
+<script type="text/javascript >
+    function approvalView(){
+        
+        $.ajax({
+            url : "../js/interface.api",
+            dataType : "JSON",
+            data : {'json' : JSON.stringify(data)},
+            type : "POST",
+            traditional : true,
+            success: function (message) {
+                
+                if (message.code == 0) {
+                    dlg.content(message.description);
+                    setTimeout(function () {
+                        // debugger
+                        //index页面获取，刷新待办任务列表
+                        // localStorage.setItem("refresh", "true");
+                        eventBus.$emit('approvalClose', 'true');
+                        dlg.remove();
+                    }, 2000);
+                } else {
+                    dlg.content(message.description);
+                    setTimeout(function() {
+                        dlg.remove();
+                        
+                    }, 2000);
+                    
+                }
+            },
+            error: function (XMLHttpRequest, textStatus, errorThrown) {
+                eventBus.$emit('approvalClose', 'true');
+                dlg.content(textStatus);
+                setTimeout(function() {
+                    dlg.remove();
+                }, 2000);
+            }
+        }
+        getProcessShowView("BASE_PROCESS_CONFIG", this.modelData.processInstanceId,
+        this.modelData.companyNo, this, (res) => {
+          let pos = res.indexOf("var type = $(this).data(\"type\");");
+          res = res.substring(0,pos)+"debugger;;"+res.substring(pos);
+          $("#workflowDiv").html(res);
+          //接口返回的标签与事件，该方法写在后端接口返回的数据中，不在前端代码中
+          $(".approval-content > ._showbutton").click();
+          $(".approval-table").fadeToggle();
+          // $("#workflowsvg").click();
+        });
+    }
+</script>
+</html>

@@ -1,0 +1,279 @@
+.popbox {
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	left: 0;
+	top: 0;
+	background: rgba(0, 0, 0, 0.3);
+	z-index: 4000;
+}
+
+.popbox .popList {
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	width: 800px;
+	border-radius: 6px;
+	border: 1px solid #d2d2d2;
+	background: #fff;
+	margin-top: -250px;
+	margin-left: -400px;
+	height: 500px;
+}
+
+.popbox .popList .popTitle, .popbox .popList .popContent, .popbox .popList .popFooter {
+	padding: 10px;
+}
+
+.popbox .popList .popTitle {
+	border-bottom: 1px solid #ccc;
+	font-size: 14px;
+}
+
+.popbox .popList .popTitle span.close {
+	cursor: pointer;
+	color: #ccc;
+}
+
+.popbox .popList .popTitle span.close:hover {
+	color: #666;
+}
+
+.popbox .popList .popContent {
+	font-size: 12px;
+}
+
+.popbox .popList .popContent .average {
+	width: 100%;
+	display: flex;
+	justify-content: space-between;
+}
+
+.popbox .popList .popContent .conditionBox {
+	margin-bottom: 10px;
+}
+
+.popbox .popList .popContent .conditionBox .condition-name {
+	float: left;
+	width: 90%;
+}
+
+.popbox .popList .popContent .conditionBox .condition-name span {
+	display: inline-block;
+	padding: 10px 20px;
+	cursor: pointer;
+}
+
+.popbox .popList .popContent .conditionBox .condition-name span.active {
+	border-bottom: 2px solid #ccc;
+}
+
+.popbox .popList .popContent .conditionBox .condition-name span:hover {
+	border-bottom: 2px solid #ccc;
+}
+
+.popbox .popList .popContent .conditionBox .condition-toggle {
+	float: right;
+	width: 10%;
+	padding-top: 4px;
+	/* on */
+	/* off */
+	/* disabled */
+}
+
+.popbox .popList .popContent .conditionBox .condition-toggle .lcs_switch {
+	display: inline-block;
+	position: relative;
+	width: 73px;
+	height: 28px;
+	border-radius: 30px;
+	background: #ddd;
+	overflow: hidden;
+	cursor: pointer;
+	-webkit-transition: all .2s ease-in-out;
+	-ms-transition: all .2s ease-in-out;
+	transition: all .2s ease-in-out;
+}
+
+.popbox .popList .popContent .conditionBox .condition-toggle .lcs_switch .lcs_cursor {
+	display: inline-block;
+	position: absolute;
+	top: 3px;
+	width: 22px;
+	height: 22px;
+	border-radius: 100%;
+	background: #fff;
+	box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.2), 0 3px 4px 0 rgba(0, 0, 0, 0.1);
+	z-index: 10;
+	-webkit-transition: all .2s linear;
+	-ms-transition: all .2s linear;
+	transition: all .2s linear;
+}
+
+.popbox .popList .popContent .conditionBox .condition-toggle .lcs_switch .lcs_label {
+	font-family: "Trebuchet MS", Helvetica, sans-serif;
+	font-size: 12px;
+	letter-spacing: 1px;
+	line-height: 18px;
+	color: #fff;
+	font-weight: bold;
+	position: absolute;
+	width: 33px;
+	top: 5px;
+	overflow: hidden;
+	text-align: center;
+	display: none;
+	-webkit-transition: all .2s ease-in-out .1s;
+	-ms-transition: all .2s ease-in-out .1s;
+	transition: all .2s ease-in-out .1s;
+}
+
+.popbox .popList .popContent .conditionBox .condition-toggle .lcs_label.lcs_label_on {
+	left: -35px;
+	z-index: 6;
+}
+
+.popbox .popList .popContent .conditionBox .condition-toggle .lcs_label.lcs_label_off {
+	right: -35px;
+	z-index: 5;
+}
+
+.popbox .popList .popContent .conditionBox .condition-toggle .lcs_switch.lcs_on {
+	background: #75b936;
+	box-shadow: 0 0 2px #579022 inset;
+}
+
+.popbox .popList .popContent .conditionBox .condition-toggle .lcs_switch.lcs_on .lcs_cursor {
+	left: 48px;
+}
+
+.popbox .popList .popContent .conditionBox .condition-toggle .lcs_switch.lcs_on .lcs_label_on {
+	left: 10px;
+	display: block;
+}
+
+.popbox .popList .popContent .conditionBox .condition-toggle .lcs_switch.lcs_off {
+	background: #b2b2b2;
+	box-shadow: 0px 0px 2px #a4a4a4 inset;
+}
+
+.popbox .popList .popContent .conditionBox .condition-toggle .lcs_switch.lcs_off .lcs_cursor {
+	left: 3px;
+}
+
+.popbox .popList .popContent .conditionBox .condition-toggle .lcs_switch.lcs_off .lcs_label_off {
+	right: 10px;
+	display: block;
+}
+
+.popbox .popList .popContent .conditionBox .condition-toggle .lcs_switch.lcs_disabled {
+	opacity: 0.65;
+	filter: alpha(opacity = 65);
+	cursor: default;
+}
+
+.popbox .popList .popContent .p-content {
+	border: 1px solid #d2d2d2;
+	height: 350px;
+}
+
+.popbox .popList .popContent .p-content>div {
+	float: left;
+	height: inherit;
+}
+
+.popbox .popList .popContent .p-content .leftBox {
+	width: 70%;
+	border-right: 1px solid #d2d2d2;
+	position: relative;
+}
+
+.popbox .popList .popContent .p-content .leftBox>span.icon-exchange {
+	position: absolute;
+	right: -16px;
+	top: 50%;
+	margin-top: -26px;
+	padding: 6px;
+	background: #ffffff;
+	border-radius: 50%;
+	border: 1px solid #ccc;
+}
+
+.popbox .popList .popContent .p-content .leftBox>div {
+	float: left;
+	height: inherit;
+}
+
+.popbox .popList .popContent .p-content .leftBox .list01 {
+	width: 50%;
+	padding: 15px;
+	border-right: 1px solid #d2d2d2;
+	overflow: auto;
+}
+
+.popbox .popList .popContent .p-content .leftBox .list01 li {
+	cursor: pointer;
+}
+
+.popbox .popList .popContent .p-content .leftBox .list01 li .icon-check-empty:before {
+	vertical-align: middle;
+}
+
+.popbox .popList .popContent .p-content .leftBox .list01 li:hover {
+	cursor: pointer;
+}
+
+.popbox .popList .popContent .p-content .leftBox .p-postDiv.list01 {
+	display: none;
+}
+
+.popbox .popList .popContent .p-content .leftBox .list02 {
+	width: 50%;
+	padding: 15px;
+	overflow: auto;
+}
+
+.popbox .popList .popContent .p-content .leftBox .list02 li {
+	padding: 5px 0;
+	width: 33%;
+	float: left;
+	cursor: pointer;
+}
+
+.popbox .popList .popContent .p-content .leftBox .list02 li span {
+	display: inline-block;
+}
+
+.popbox .popList .popContent .p-content .rightBox {
+	width: 30%;
+}
+
+.popbox .popList .popContent .p-content .rightBox .list04 {
+	overflow: auto;
+	height: inherit;
+	padding: 15px;
+}
+
+.popbox .popList .popContent .p-content .rightBox .list04 li {
+	padding: 5px 0;
+	width: 100%;
+	float: left;
+	cursor: pointer;
+}
+
+.popbox .popList .popContent .p-content .rightBox .list04 li span {
+	display: inline-block;
+}
+
+.popbox .popList .popFooter {
+	position: absolute;
+	bottom: 0;
+	right: 0;
+	font-size: 12px;
+}
+
+.popbox .popList .popFooter button {
+	padding: 4px 15px;
+}
+
+/*# sourceMappingURL=popList.css.map */

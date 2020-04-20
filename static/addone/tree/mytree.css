@@ -1,0 +1,102 @@
+
+.department-div>li, .department-div>li>ul>li {
+	display: block;
+	width: 100%;
+	float: left;
+	text-decoration: none;
+	color: #929292;
+	font-size: 0.7rem;
+	font-family: "微软雅黑";
+	background: #f5f7fb;
+	white-space: nowrap;
+	position: relative;
+	overflow: hidden;
+	border-top: #ebebeb 0.5px solid;
+	border-collapse: collapse;
+}
+
+.department-div>li>span, .department-div>li>ul>li>span {
+	display: block;
+	line-height: 2;
+	height: 100%;
+	padding-left: 0.2rem;
+	border-left: solid 4px #3f98e4;
+	font-size: .16rem
+}
+.department-div>li>span{
+	display:none;
+}
+.department-div li>span.focus {
+	background-color: white;
+	color:#3f98e4;
+}
+
+.department-div li>span:hover {
+	background-color: white;
+	color: #3f98e4; -o-transition : color .5s linear, background .5s linear;
+	-moz-transition: color .5s linear, background .5s linear;
+	-webkit-transition: color .5s linear, background .5s linear;
+	transition: color .5s linear, background .5s linear;
+	-o-transition: color .5s linear, background .5s linear;
+}
+
+.department-div>li>ul>li ul>li>span {
+	display: block;
+	height: 42px;
+	line-height: 2;
+	height: 100%;
+	font-size: 0.14rem;
+}
+
+.department-div>li>ul>li ul {
+	-o-transition: height .5s linear;
+	-moz-transition: height .5s linear;
+	-webkit-transition: height .5s linear;
+	transition: height .5s linear;
+}
+
+span.levelopen:before {
+	transform: rotate(90deg);
+	-ms-transform: rotate(90deg); /* IE 9 */
+	-moz-transform: rotate(90deg); /* Firefox */
+	-webkit-transform: rotate(90deg); /* Safari 鍜� Chrome */
+	-o-transform: rotate(90deg);
+}
+
+span.level3 {
+	padding-left: .45rem;
+}
+
+span.level4 {
+	padding-left: .65rem;
+}
+
+span.level5 {
+	padding-left: .85rem;
+}
+
+span.branch:before {
+	content: '\e804';
+	font-family: "fontello";
+	font-size: 0.16rem;
+	padding-right: 0.1rem;
+	display:inline-block;
+	transform-origin:25% 50%;
+	-o-transition: transform .5s linear;
+	-moz-transition: transform .5s linear;
+	-webkit-transition: transform .5s linear;
+	transition: transform .5s linear;
+}
+
+span.level6 {
+	padding-left: 5rem;
+}
+
+.department-div>li>ul>li ul {
+	height: 0;
+	overflow: hidden;
+}
+.department-div>li>ul>li ul.open {
+	height: auto;
+	overflow: hidden;
+}
