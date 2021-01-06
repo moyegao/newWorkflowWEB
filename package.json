@@ -12,7 +12,7 @@
   "dependencies": {
     "@ckeditor/ckeditor5-build-decoupled-document": "^12.3.1",
     "@tinymce/tinymce-vue": "^2.1.0",
-    "axios": "^0.18.1",
+    "axios": "^0.21.1",
     "babel-polyfill": "^6.26.0",
     "chromedriver": "^81.0.0",
     "component-public-company": "^2.6.2",
