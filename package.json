@@ -24,7 +24,7 @@
     "js-md5": "^0.7.3",
     "node-sass": "^4.12.0",
     "sass-loader": "^7.1.0",
-    "tinymce": "^5.0.11",
+    "tinymce": "^5.7.1",
     "vue": "^2.5.2",
     "vue-amap": "^0.5.8",
     "vue-contextmenu": "^1.5.9",
